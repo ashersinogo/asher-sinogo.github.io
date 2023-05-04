@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>InnerHTML</title>
+    </head>
+    <body>
+        <h1>Asher A. Sinogo</h1>
+        <p id="click">This text will change when button is clicked</p>
+        <button type="button" onclick="clicked()">Click Here</button>
+        
+        <p id="">This is an example of</p>
+        <button type="button" onclick="document2()">Click Here</button>
+        
+        <p id="click">Click the button below to show the alert box</p>
+        <button type="button" onclick="alert2()">Click Here</button>
+        
+        <p id="click">Console.log</p>
+        <button type="button" onclick="console2()">Click Here</button>
+
+        <script>
+            function clicked(){
+                document.getElementById("click").innerHTML = "This is an example of innerHTML";
+            }
+            function document2(){
+                document.write("This document.write");
+            }
+            function alert2(){
+                alert("This is an example of a dialog box")
+            }
+            function console2(){
+                console.log("This is an example of console.log")
+            }
+        </script>
+    </body>
+</html>

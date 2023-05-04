@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: magenta;
+        }
+
+        .h1 {
+            color: white;
+            background-color: magenta;
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+            font-family: "Courier New";
+            font-size: large;
+        }
+
+        .h2 {
+            color: white;
+            background-color: magenta;
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+            font-family: "Courier New";
+        }
+
+        .table {
+            background-color: magenta;
+            border-color: black;
+            text-shadow: black;
+        }
+
+        .fname {
+            background-color: magenta;
+            padding: 10px;
+        }
+
+        .lname {
+            background-color: magenta;
+            padding: 10px;
+        }
+
+        .bday {
+            background-color: magenta;
+            padding: 10px;
+        }
+
+        .btn {
+            background-color: magenta;
+            padding: 10px;
+        }
+
+        .txtb {
+            padding: 10px;
+        }
+
+        .fname:hover {
+            background-color: beige;
+            padding-top: 9px;
+            padding-bottom: 9px;
+        }
+
+        .fname:active {
+            background-color: pink;
+            padding-top: 9px;
+            padding-bottom: 9px;
+        }
+
+        .lname:hover {
+            background-color: beige;
+            padding-top: 9px;
+            padding-bottom: 9px;
+        }
+
+        .lname:active {
+            background-color: pink;
+            padding-top: 9px;
+            padding-bottom: 9px;
+        }
+
+        .bday:hover {
+            background-color: beige;
+            padding-top: 9px;
+            padding-bottom: 9px;
+        }
+
+        .bday:active {
+            background-color: pink;
+            padding-top: 9px;
+            padding-bottom: 9px;
+        }
+
+        .btn:hover {
+            background-color: beige;
+            padding-top: 9px;
+            padding-bottom: 9px;
+        }
+
+        .btn:active {
+            background-color: pink;
+            padding-top: 9px;
+            padding-bottom: 9px;
+        }
+
+        .container {
+            border-radius: 20px;
+            margin-top: 50px;
+            margin-bottom: 80px;
+            margin-left: 300px;
+            margin-right: 300px;
+            border-style: outset;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <div class="h1">
+                <h1>Personal Info</h1>
+            </div>
+            <div class="table">
+                <table border="3">
+                    <tr>
+                        <br>
+                        <div class="fname">
+                            <input class="textbox-12" type="text" placeholder="First Name" id="myFirst"
+                                onkeydown="count()">
+                        </div>
+                        <div class="lname">
+                            <input class="textbox-12" type="text" placeholder="Last Name" id="myLast"
+                                onkeydown="count()">
+                        </div>
+                        <div class="bday">
+                            <input class="textbox-12" type="text" placeholder="Birth Year" id="myLast" id="myBirth">
+                        </div>
+                        <div class="btn">
+                            <button onclick="sub()">SUBMIT</button><br><br>
+                        </div>
+                        <div class="h2">
+                            FIRST NAME AND LAST NAME IS PRESSED <span id="count">0</span> TIMES<br><br>
+                            YOUR AGE IS <span id="myBirth1">0</span>
+                        </div>
+                    </tr>
+            </div>
+    </div>
+    </div>
+    </table>
+    </center>
+    <script>
+
+        function count() {
+            var count = document.getElementById("count").innerHTML;
+
+            document.getElementById("count").innerHTML = Number(count) + 1;
+        }
+        function sub() {
+            alert("Your Information is Saved")
+        }
+        var myBirth = document.getElementById("myBirth");
+        var myBirth1 = document.getElementById("myBirth1");
+        var y = 2023
+
+        myBirth.addEventListener("keyup", function () {
+            var val = myBirth.value;
+            myBirth1.innerText = (y - val);
+        });
+    </script>
+</body>
+
+</html>
